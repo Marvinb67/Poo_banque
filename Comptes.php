@@ -2,10 +2,10 @@
 
 class Comptes
 {
-    private $_libelle;
-    private $_soldeInitiale;
-    private $_devise;
-    private $_titulaireUnique;
+    private string $_libelle;
+    private  float $_soldeInitiale;
+    private string $_devise;
+    private Titulaires $_titulaireUnique;
 
     public function __construct(string $libelle, float $soldeInitiale, string $devise, Titulaires $titulaireUnique)
     {
@@ -61,7 +61,7 @@ class Comptes
     {
         $this->_titulaireUnique = $_titulaireUnique;
 
-        return $this->_tiulaireUnique;
+        return $this->_titulaireUnique;
     }
 
     public function Crediter(float $montant)
@@ -86,8 +86,12 @@ class Comptes
         return;
     }
 
+    public function infosComptes(){
+        return "Compte : $this->_libelle Titulaire : ".$this->_titulaireUnique->get_nom()." ".$this->_titulaireUnique->get_prenom()." Solde : $this->_soldeInitiale $this->_devise";
+    }
+
     public function __toString()
     {
-        return "Compte : $this->_libelle <br> Solde : $this->_soldeInitiale $this->_devise";
+        return "$this->_libelle";
     }
 }

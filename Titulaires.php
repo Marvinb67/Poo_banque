@@ -2,12 +2,12 @@
 
 class Titulaires
 {
-    private $_nom;
-    private $_prenom;
-    private $_naissance;
-    private $_ville;
-    private $_comptes;
-    private $age;
+    private string $_nom;
+    private string $_prenom;
+    private DateTime $_naissance;
+    private string $_ville;
+    private array $_comptes;
+    private float $age;
 
     public function __construct(string $nom, string $prenom, string $naissance, string $ville)
     {
@@ -92,6 +92,6 @@ class Titulaires
 
     public function __toString()
     {
-        return "Nom : $this->_nom <br> Prenom : $this->_prenom <br> Née le : ".$this->_naissance->format('Y-m-d').' <br> Age : '.$this->get_Age()->format('%y ans ')." <br> Ville : $this->_ville <br> comptes : ".implode('/ ', $this->_comptes).'';
+        return "Nom : $this->_nom <br> Prenom : $this->_prenom <br> Née le : ".$this->_naissance->format('Y-m-d').' <br> Age : '.$this->get_Age()->format('%y ans ')." <br> Ville : $this->_ville <br> Comptes : ".implode('; ', $this->_comptes).'';
     }
 }
