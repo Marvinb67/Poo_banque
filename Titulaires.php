@@ -1,6 +1,6 @@
 <?php
 
-class Titulaire
+class Titulaires
 {
     private $_nom;
     private $_prenom;

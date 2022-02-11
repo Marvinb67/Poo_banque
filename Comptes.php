@@ -7,7 +7,7 @@ class Comptes
     private $_devise;
     private $_titulaireUnique;
 
-    public function __construct(string $libelle, float $soldeInitiale, string $devise, Titulaire $titulaireUnique)
+    public function __construct(string $libelle, float $soldeInitiale, string $devise, Titulaires $titulaireUnique)
     {
         $this->_libelle = $libelle;
         $this->_soldeInitiale = $soldeInitiale;

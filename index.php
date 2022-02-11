@@ -1,9 +1,9 @@
 <?php
 
 require 'Comptes.php';
-require 'Titulaire.php';
+require 'Titulaires.php';
 
-$titulaire = new Titulaire('Slaoui', 'Martin', '1999-04-01', 'Wantzenau');
+$titulaire = new Titulaires('Slaoui', 'Martin', '1999-04-01', 'Wantzenau');
 
 $livretA = new Comptes('Livret A', 10000, '€', $titulaire);
 $compteCourant = new Comptes('Compte Courant', 80000, '£', $titulaire);
